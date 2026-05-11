@@ -1,0 +1,11 @@
+# Python 3.12+
+langchain==1.2.13
+langchain-aws==1.4.1
+langchain-openai==1.1.12
+matplotlib==3.10.8
+numpy==2.4.3
+pandas==3.0.1
+python-dotenv==1.2.2
+scikit-learn==1.8.0
+typing-extensions==4.15.0
+wandb==0.25.1
