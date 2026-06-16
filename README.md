@@ -8,7 +8,7 @@
 
 [![Gong Research](https://img.shields.io/badge/Gong-Research-00b0b9?style=for-the-badge)](https://www.gong.io)
 [![Conference](https://img.shields.io/badge/ACL%20Findings-2026-blueviolet?style=for-the-badge)](https://2026.aclweb.org/)
-[![arXiv](https://img.shields.io/badge/arXiv-coming%20soon-b31b1b?style=for-the-badge)](https://github.com/gong-io/call-playbook)
+[![arXiv](https://img.shields.io/badge/arXiv-2606.15641-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2606.15641)
 [![Python](https://img.shields.io/badge/Python-3.12-3776ab?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
 
