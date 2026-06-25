@@ -11,6 +11,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2606.15641-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2606.15641)
 [![Python](https://img.shields.io/badge/Python-3.12-3776ab?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
+[![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Dataset-ffd21e?style=for-the-badge)](https://huggingface.co/datasets/gong-io-research/call-playbook)
 
 <br>
 
@@ -80,7 +81,7 @@ All methods share the same classifier prompt structure; they differ in what know
 
 ### Access the Dataset
 
-**[Request Dataset Access →](https://docs.google.com/forms/d/e/1FAIpQLSf4gy1OGd-YHFEf0hbGXUgTumvZEb_GUoMafeHnjG2Pwt-68A/viewform?usp=dialog)**
+**[🤗 gong-io-research/call-playbook on Hugging Face →](https://huggingface.co/datasets/gong-io-research/call-playbook)**
 
 </div>
 
@@ -104,25 +105,47 @@ The **Call Playbook Dataset** contains annotated excerpts from real enterprise s
 
 ### Setup
 
-After requesting access, place the downloaded data under `call_playbook_dataset/` in the project root:
+The dataset is available on Hugging Face. Request access at **[gong-io-research/call-playbook](https://huggingface.co/datasets/gong-io-research/call-playbook)**, then install the `datasets` library and load any task by name:
 
+```python
+from datasets import load_dataset
+
+# Load a single task
+ds = load_dataset("gong-io-research/call-playbook", "business_goals")
+
+print(ds["train"][0])
+# {'id': 0, 'text': '[PROSPECT_A] We need to reduce churn ...', 'label': 1}
 ```
-call_playbook_dataset/
-├── business_goals/
-│   ├── train.csv
-│   └── test.csv
-├── decision_criteria/
-│   ├── train.csv
-│   └── test.csv
-├── decision_makers/
-│   ├── train.csv
-│   └── test.csv
-├── decision_making_process/
-│   ├── train.csv
-│   └── test.csv
-└── pain_points/
-    ├── train.csv
-    └── test.csv
+
+Available configurations: `business_goals`, `decision_criteria`, `decision_makers`, `decision_making_process`, `pain_points`.
+
+```python
+from datasets import load_dataset
+
+tasks = [
+    "business_goals",
+    "decision_criteria",
+    "decision_makers",
+    "decision_making_process",
+    "pain_points",
+]
+
+for task in tasks:
+    ds = load_dataset("gong-io-research/call-playbook", task)
+    print(task, ds["train"].num_rows, ds["test"].num_rows)
+```
+
+To use the dataset with this codebase, save each split as CSV files under `call_playbook_dataset/`:
+
+```python
+import os
+from datasets import load_dataset
+
+for task in tasks:
+    ds = load_dataset("gong-io-research/call-playbook", task)
+    os.makedirs(f"call_playbook_dataset/{task}", exist_ok=True)
+    ds["train"].to_csv(f"call_playbook_dataset/{task}/train.csv", index=False)
+    ds["test"].to_csv(f"call_playbook_dataset/{task}/test.csv", index=False)
 ```
 
 Pass the task subfolder as `--data_dir` (e.g., `--data_dir ./call_playbook_dataset/business_goals`).
@@ -388,6 +411,6 @@ If this work or dataset is useful to your research, please cite:
 
 <div align="center">
 
-**[Request Dataset Access](https://docs.google.com/forms/d/e/1FAIpQLSf4gy1OGd-YHFEf0hbGXUgTumvZEb_GUoMafeHnjG2Pwt-68A/viewform?usp=dialog)** · **[MIT License](LICENSE)**
+**[Read our paper](https://arxiv.org/abs/2606.15641)** · **[🤗 Dataset on Hugging Face](https://huggingface.co/datasets/gong-io-research/call-playbook)** · **[MIT License](LICENSE)**
 
 </div>
