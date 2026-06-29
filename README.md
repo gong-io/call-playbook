@@ -8,7 +8,7 @@
 
 [![Gong Research](https://img.shields.io/badge/Gong-Research-00b0b9?style=for-the-badge)](https://www.gong.io)
 [![Conference](https://img.shields.io/badge/ACL%20Findings-2026-blueviolet?style=for-the-badge)](https://2026.aclweb.org/)
-[![arXiv](https://img.shields.io/badge/arXiv-2606.15641-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2606.15641)
+[![ACL Anthology](https://img.shields.io/badge/ACL%20Anthology-2026.findings--acl.1631-b31b1b?style=for-the-badge)](https://aclanthology.org/2026.findings-acl.1631.pdf)
 [![Python](https://img.shields.io/badge/Python-3.12-3776ab?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
 [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Dataset-ffd21e?style=for-the-badge)](https://huggingface.co/datasets/gong-io-research/call-playbook)
@@ -411,6 +411,6 @@ If this work or dataset is useful to your research, please cite:
 
 <div align="center">
 
-**[Read our paper](https://arxiv.org/abs/2606.15641)** · **[🤗 Dataset on Hugging Face](https://huggingface.co/datasets/gong-io-research/call-playbook)** · **[MIT License](LICENSE)**
+**[Read our paper](https://aclanthology.org/2026.findings-acl.1631.pdf)** · **[🤗 Dataset on Hugging Face](https://huggingface.co/datasets/gong-io-research/call-playbook)** · **[MIT License](LICENSE)**
 
 </div>
