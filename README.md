@@ -394,16 +394,24 @@ If this work or dataset is useful to your research, please cite:
 
 ```bibtex
 @inproceedings{rotman-etal-2026-distilling,
-    title = "Distilling Examples into Task Instructions: Enhanced In-Context Learning for Real-World {B2B} Conversations",
+    title = "Distilling Examples into Task Instructions: Enhanced In-Context Learning for Real-World {B}2{B} Conversations",
     author = "Rotman, Guy  and
       Kopilov, Adi  and
-      Berger Zalmanson, Danit  and
+      Zalmanson, Danit Berger  and
       Allouche, Omri",
-    booktitle = "Findings of the Association for Computational Linguistics: ACL 2026",
+    editor = "Liakata, Maria  and
+      Moreira, Viviane P.  and
+      Zhang, Jiajun  and
+      Jurgens, David",
+    booktitle = "Findings of the {A}ssociation for {C}omputational {L}inguistics: {ACL} 2026",
     month = jul,
     year = "2026",
-    address = "San Diego, California, USA",
+    address = "San Diego, California, United States",
     publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.findings-acl.1631/",
+    pages = "32590--32613",
+    ISBN = "979-8-89176-395-1",
+    abstract = "In-context learning (ICL) is the standard method for low-resource classification, yet its efficacy in specialized domains remains largely unexplored. We address the challenge of classifying semantically complex, multi-party B2B conversations, where traditional ICL encounters significant limitations, especially as context length increases due to the concatenation of multiple few-shot examples. We introduce the Call Playbook dataset, featuring five classification tasks derived from real-world B2B conversations targeting core sales concepts. To bridge the gap between performance and practical utility, we propose novel knowledge extraction methods that distill verbose examples into compact, interpretable representations of structured classification criteria and precise task descriptions. Our approach achieves a 99{\%} reduction in token usage and improves macro-averaged AUC by up to 7{\%} over traditional ICL. Notably, it remains robust as context grows, unlike advanced token compression baselines which degrade by over 9 F1 points. Importantly, our framework enables direct refinement of classification logic, addressing critical needs for transparency, efficiency, and user interaction in real-world NLP applications."
 }
 ```
 
